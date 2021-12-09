@@ -1,30 +1,24 @@
 const { resolve } = require('path')
 
 module.exports = {
-  base: '/vue-design/',
+  base: '/vue-next-render/',
   locales: {
     '/': {
+      lang: 'zh-CN',
+      title: '渲染器',
+      description: '也许是讲渲染器相关内容中最细最全的了吧'
+    },
+    '/en/': {
       lang: 'en-US',
       title: 'renderer',
       description: 'Detailed renderer'
     },
-    '/zh/': {
-      lang: 'zh-CN',
-      title: '渲染器',
-      description: '也许是讲渲染器相关内容中最细最全的了吧'
-    }
   },
   themeConfig: {
     displayAllHeaders: true,
     sidebarDepth: 2,
     locales: {
       '/': {
-        label: 'English',
-        sidebar: [
-          '/'
-        ]
-      },
-      '/zh/': {
         label: '简体中文',
         editLinkText: '在 GitHub 上编辑此页',
         sidebar: [
@@ -34,13 +28,19 @@ module.exports = {
           ['/zh/renderer', '渲染器之挂载'],
           ['/zh/renderer-patch', '渲染器之patch'],
           ['/zh/renderer-diff', '渲染器的核心 Diff 算法'],
-          ['/zh/renderer-advanced', '自定义渲染器']
-          // ['/zh/stateful-component', '有状态组件的设计'],
-          // ['/zh/observer', '基于 Proxy 的响应系统'],
-          // ['/zh/component-expand', '组件的拓展']
+          ['/zh/renderer-advanced', '自定义渲染器'],
+          ['/zh/stateful-component', '有状态组件的设计'],
+          ['/zh/observer', '基于 Proxy 的响应系统'],
+          ['/zh/component-expand', '组件的拓展']
         ],
         nav: [
           { text: '捐赠者名单', link: '/zh/donor-list' },
+        ]
+      },
+      '/en/': {
+        label: 'English',
+        sidebar: [
+          '/'
         ]
       }
     },
